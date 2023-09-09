@@ -1,0 +1,77 @@
+.lecturerviewass {
+  margin: 130px 15px 10px 15px;
+} 
+
+.lec_view_ass_header {
+    margin: 20px 0px 35px 0px;
+  }
+  
+  .lec_view_ass_table {
+    width: 93%;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    border-radius: 10px;
+    margin: 20px;
+    border-color: #000000;
+    border-style: groove;
+    border-width: 3px;
+  }
+  
+  .lec_view_ass_table td {
+    padding: 12px 15px;
+    text-align: center;
+    border-color: #000000;
+    border-style: groove;
+    border-width: 1px;
+    color: #3f3d3d;
+  }
+  
+  .lec_view_ass_table th {
+    padding: 12px 15px;
+    text-align: center;
+    background-color: #b5abab;
+    font-weight: bold;
+    color: #000000;
+    border-color: #000000;
+    border-style: groove;
+    border-width: 2px;
+  }
+  
+  .lec_view_ass_table tbody tr {
+    border-bottom: 1px solid #000000;
+  }
+  
+  .lec_view_ass_table tbody tr:hover {
+    background-color: #f2f2f2;
+  }
+
+  .lec_view_ass_table td button {
+    margin: 10px;
+    padding: 5px 8px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #ffffff;
+    background-color: #007bff;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  
+  /* .lec_view_ass_table td button.view {
+    background-color: #4285f4; 
+    color: #d73131;
+  }
+
+  .lec_view_ass_table td button.delete {
+    background-color: #bef436;
+    color: #e32424;
+  } */
+
+  .lec_view_ass_table td button:hover {
+    opacity: 0.8;
+  }
+
+  .lec_view_ass_table td button:hover .delete {
+    color: #fff;
+  }
+  

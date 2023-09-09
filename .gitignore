@@ -1,0 +1,3 @@
+/.env
+client/frontend/node_modules
+node_modules

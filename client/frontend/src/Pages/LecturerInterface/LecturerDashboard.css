@@ -1,0 +1,62 @@
+.lecturerdashboard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .lec_dash_upload-card {
+    width: 400px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .lec_dash_uploaded-files {
+    margin-top: 20px;
+    text-align: left;
+  }
+  
+  .lec_dash_uploaded-files ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .lec_dash_uploaded-files li {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .lec_dash_uploaded-files button {
+    background-color: #ff6b6b; 
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+  
+  .lec_dash_upload-card p {
+    color: green;
+    margin-top: 10px;
+  }
+  
+  .lec_dash_upload-card p.invalid-file {
+    color: red;
+  }
+  
+  .lec_dash_upload-card button {
+    margin-top: 10px;
+    background-color: #007bff;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+  
