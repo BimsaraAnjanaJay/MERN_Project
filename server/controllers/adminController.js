@@ -29,17 +29,22 @@ const getAllUsers = async (req, res) => {
 }
 
 const getOneUser = async (req, res) => {
-    const userID = req.params.id;
-    await userModel.findOne({ userID })
-        .then(studentInfo => res.status(200).json({ studentInfo }))
-        .catch((err) => {
-            console.log(err)
-            res.status(400).json({ error: "Error occurred" })
-        })
+    try {
+        const userID = req.params.userId;
+        const user = await userModel.findById(userID)
+        if (!user) {
+            return res.status(404).json({ message: 'User not found' });
+        }
+        res.json(user);
+    } 
+    catch (error) {
+      console.error(error);
+      res.status(500).json({ message: 'Internal Server Error' });
+    }
 }
 
 const updateUser = async (req, res) => {
-    const userID = req.params.id;
+    const userID = req.params.userId;
     const { name, email, password } = req.body;
     const updtPassword = await bcrypt.hash(password, 10);
     const updated = await userModel.findByIdAndUpdate(userID, { name: name, email: email, password: updtPassword })
