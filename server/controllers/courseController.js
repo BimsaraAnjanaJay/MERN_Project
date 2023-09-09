@@ -41,7 +41,7 @@ const deleteCourse = async (req, res) => {
 const getOneCourse = async (req, res) => {
   try {
     const courseId = req.params.courseId;
-    const course = await courseModel.findById(courseId).populate('teacher students');
+    const course = await courseModel.findById(courseId)
 
     if (!course) {
       return res.status(404).json({ message: 'Course not found' });
@@ -53,6 +53,7 @@ const getOneCourse = async (req, res) => {
     res.status(500).json({ message: 'Internal Server Error' });
   }
 };
+
 
 const getAllCourses = async (req, res) => {
     await courseModel.find()
