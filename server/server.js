@@ -13,7 +13,7 @@ const student = require('./routes/studentRoutes')
 const lecturer = require('./routes/lecturerRoutes')
 const authentication = require('./routes/authRoutes')
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 6000;
 dbConnect;
 
 app.use(morgan('dev'))
