@@ -1,4 +1,4 @@
-.studentcard {
+  .studentcard, .lecturercard, .coursecard {
     width: 250px;
     border: 1px solid rgba(0, 0, 0.125);
     margin: 0 auto;
@@ -6,22 +6,22 @@
     overflow: hidden;
   }
   
-  .stu-card-desc {
+  .stu-card-desc, .lec-card-desc, .cou-card-desc {
     height: 130px;
     padding: 10px;
   }
   
-  .stu-card-desc h2 {
+  h2 {
     font-size: 1em;
     font-weight: 400;
   }
   
-  .stu-card-desc h3,
+  h3,
   p {
     font-weight: 300;
   }
   
-  .stu-card-desc h3 {
+  h3 {
     color: #6c757d;
     font-size: 1em;
     padding: 10px 0 10px 0;
