@@ -1,0 +1,56 @@
+/* Style for the course content */
+.course_content {
+    padding: 20px;
+    text-align: center;
+    background-color: #f5f5f500;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+  }
+  
+  /* Style for the back button */
+  .back-button {
+    text-decoration: none;
+    color: #000; /* Black color for links */
+    font-weight: bold;
+    display: block;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .back-button:hover {
+    text-decoration: underline;
+  }
+  
+  /* Style for the course materials list */
+  .course_content ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Style for course material items */
+  .course_content li {
+    margin: 10px 0;
+    padding: 5px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 70%; /* Adjust the width as needed */
+  }
+  
+  /* Style for course material links */
+  .course_content a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #007bff; /* Blue color for links */
+  }
+  
+  /* Style for course material links on hover */
+  .course_content a:hover {
+    text-decoration: underline;
+  }
+  

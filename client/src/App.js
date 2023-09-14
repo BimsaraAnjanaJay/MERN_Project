@@ -8,6 +8,7 @@ import StudentHome from './Pages/StudentInterface/StudentHome';
 import StudentDashboard from './Pages/StudentInterface/StudentDashboard';
 import StudentProfile from './Pages/StudentInterface/StudentProfile';
 import StudentAssignments from './Pages/StudentInterface/StudentAssignments';
+import CourseContent from './Pages/StudentInterface/CourseContent'; 
 
 import LecturerHome from './Pages/LecturerInterface/LecturerHome';
 import LecturerDashboard from './Pages/LecturerInterface/LecturerDashboard';
@@ -39,6 +40,7 @@ function App() {
             <Route path="/studentdashboard" element={<StudentDashboard />} />
             <Route path="/studentprofile" element={<StudentProfile />} />
             <Route path="/studentassignments" element={<StudentAssignments />} />
+            <Route path="/course/:courseTitle" element={<CourseContent />} />
           <Route path="/lecturerhome" element={<LecturerHome />} />
             <Route path="/lecturerdashboard" element={<LecturerDashboard />} />
             <Route path="/lecturerprofile" element={<LecturerProfile />} />
