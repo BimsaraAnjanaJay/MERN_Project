@@ -3,11 +3,14 @@ import { Link, useParams, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import './Edit.css';
 
-function EditStudent(props) {
-  const [student, setStudent] = useState({
-    name: '',
-    email: '',
-    password: ''
+function EditLecturer(props) {
+  const [lecturer, setLecturer] = useState({
+    title: '',
+    isbn: '',
+    author: '',
+    description: '',
+    published_date: '',
+    publisher: '',
   });
 
   const { id } = useParams();
@@ -15,55 +18,61 @@ function EditStudent(props) {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:8082/admin/user/${id}`)
+      .get(`http://localhost:8082/api/lecturer/${id}`)
       .then((res) => {
-        setStudent({
-          name: res.data.name,
-          email: res.data.email,
-          password: res.data.password
+        setLecturer({
+          title: res.data.title,
+          isbn: res.data.isbn,
+          author: res.data.author,
+          description: res.data.description,
+          published_date: res.data.published_date,
+          publisher: res.data.publisher,
         });
       })
       .catch((err) => {
-        console.log('Error from EditStudent');
+        console.log('Error from EditLecturer');
       });
   }, [id]);
 
   const onChange = (e) => {
-    setStudent({ ...student, [e.target.name]: e.target.value });
+    setLecturer({ ...lecturer, [e.target.name]: e.target.value });
   };
 
   const onSubmit = (e) => {
     e.preventDefault();
 
     const data = {
-      name: student.name,
-      email: student.email,
-      password: student.password
+      title: lecturer.title,
+      isbn: lecturer.isbn,
+      author: lecturer.author,
+      description: lecturer.description,
+      published_date: lecturer.published_date,
+      publisher: lecturer.publisher,
     };
 
     axios
-      .put(`http://localhost:8082/admin/user/update/${id}`, data)
+      .put(`http://localhost:8082/api/lecturer/${id}`, data)
       .then((res) => {
-        navigate(`/show-student/${id}`);
+        navigate(`/show-lecturer/${id}`);
       })
       .catch((err) => {
-        console.log('Error in EditStudent!');
+        console.log('Error in EditLecturer!');
       });
   };
 
   return (
-    <div className='editstudent'>
+    <div className='editlecturer'>
       <div className='edit-stu-container'>
         <div className='row'>
           <div className='col-md-8 m-auto'>
             <br />
             <Link to='/' className='btn btn-outline-warning float-left'>
-              Show Student List
+              Show Lecturer List
             </Link>
           </div>
           <div className='col-md-8 m-auto'>
-            <h1 className='display-4 text-center'>Edit Student</h1>
-            <p className='lead text-center'>Update Student's Info</p>
+            <h1 className='display-4 text-center'>Edit Lecturer</h1>
+            <p className='lead text-center'>Update Lecturer's Info</p>
           </div>
         </div>
 
@@ -73,10 +82,10 @@ function EditStudent(props) {
               <label htmlFor='title'>Name</label>
               <input
                 type='text'
-                placeholder='Title of the Student'
+                placeholder='Title of the Lecturer'
                 name='title'
                 className='form-control'
-                value={student.title}
+                value={lecturer.title}
                 onChange={onChange}
               />
             </div>
@@ -89,7 +98,7 @@ function EditStudent(props) {
                 placeholder='ISBN'
                 name='isbn'
                 className='form-control'
-                value={student.isbn}
+                value={lecturer.isbn}
                 onChange={onChange}
               />
             </div>
@@ -102,7 +111,7 @@ function EditStudent(props) {
                 placeholder='Author'
                 name='author'
                 className='form-control'
-                value={student.author}
+                value={lecturer.author}
                 onChange={onChange}
               />
             </div>
@@ -112,10 +121,10 @@ function EditStudent(props) {
               <label htmlFor='description'>Phone Number</label>
               <textarea
                 type='text'
-                placeholder='Description of the Student'
+                placeholder='Description of the lecturer'
                 name='description'
                 className='form-control'
-                value={student.description}
+                value={lecturer.description}
                 onChange={onChange}
               />
             </div>
@@ -128,7 +137,7 @@ function EditStudent(props) {
                 placeholder='Published Date'
                 name='published_date'
                 className='form-control'
-                value={student.published_date}
+                value={lecturer.published_date}
                 onChange={onChange}
               />
             </div>
@@ -151,7 +160,7 @@ function EditStudent(props) {
               type='submit'
               className='btn btn-outline-info btn-lg btn-block'
             >
-              Update Student
+              Update Lecturer
             </button>
           </form>
         </div>
@@ -160,4 +169,4 @@ function EditStudent(props) {
   );
 }
 
-export default EditStudent;
+export default EditLecturer;
