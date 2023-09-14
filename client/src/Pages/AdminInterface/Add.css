@@ -1,0 +1,20 @@
+.addstudent, .addlecturer, .addcourse {
+    /* background-color: #2c3e50; */
+    min-height: 100vh;
+    color: white;
+}
+ 
+.add-stu-container, .add-lec-container, .add-cou-container {
+    border-radius: 10px;
+    margin: 15px 20px auto 20px;
+}
+
+.admin-form-group {
+    margin: 10px;
+}
+
+.add-stu-submit-button, .add-lec-submit-button, .add-cou-submit-button {
+    left: 50%;
+    right: 50%;
+}
+

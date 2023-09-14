@@ -5,10 +5,10 @@ import './Add.css';
 
 import { useNavigate } from 'react-router-dom';
 
-const AddStudent = (props) => {
+const AddCourse = (props) => {
 
   const navigate = useNavigate();
-  const [student, setStudent] = useState({
+  const [course, setCourse] = useState({
     title: '',
     isbn: '',
     author: '',
@@ -18,16 +18,16 @@ const AddStudent = (props) => {
   });
 
   const onChange = (e) => {
-    setStudent({ ...student, [e.target.name]: e.target.value });
+    setCourse({ ...course, [e.target.name]: e.target.value });
   };
 
   const onSubmit = (e) => {
     e.preventDefault();
 
     axios
-      .post('http://localhost:8082/api/student', student)
+      .post('http://localhost:8082/api/course', course)
       .then((res) => {
-        setStudent({
+        setCourse({
           title: '',
           isbn: '',
           author: '',
@@ -40,32 +40,32 @@ const AddStudent = (props) => {
         navigate('/');
       })
       .catch((err) => {
-        console.log('Error in AddStudent!');
+        console.log('Error in AddCourse!');
       });
   };
 
   return (
-    <div className='addstudent'>
-      <div className='add-stu-container'>
+    <div className='addcourse'>
+      <div className='add-cou-container'>
         <div className='row'>
           <div className='col-md-8 m-auto'>
             <br />
-            <Link to='/showstudent' className='btn btn-outline-warning float-left'>
-              Show Students List
+            <Link to='/showcourse' className='btn btn-outline-warning float-left'>
+              Show Courses List
             </Link>
           </div>
           <div className='col-md-8 m-auto'>
-            <h1 className='display-4 text-center'>Add Student</h1>
-            <p className='lead text-center'>Create new Student</p>
+            <h1 className='display-4 text-center'>Add Course</h1>
+            <p className='lead text-center'>Create new course</p>
 
             <form noValidate onSubmit={onSubmit}>
               <div className='admin-form-group'>
                 <input
                   type='text'
-                  placeholder='Name of the Student'
+                  placeholder='Name of the course'
                   name='title'
                   className='form-control'
-                  value={student.title}
+                  value={course.title}
                   onChange={onChange}
                 />
               </div>
@@ -73,50 +73,50 @@ const AddStudent = (props) => {
               <div className='admin-form-group'>
                 <input
                   type='text'
-                  placeholder='Index Number'
+                  placeholder='Course Number'
                   name='isbn'
                   className='form-control'
-                  value={student.isbn}
+                  value={course.isbn}
                   onChange={onChange}
                 />
               </div>
 
-              <div className='admin-form-group'>
+              {/* <div className='admin-form-group'>
                 <input
                   type='text'
                   placeholder='E-mail'
                   name='author'
                   className='form-control'
-                  value={student.author}
+                  value={course.author}
                   onChange={onChange}
                 />
-              </div>
+              </div> */}
 
-              <div className='admin-form-group'>
+              {/* <div className='admin-form-group'>
                 <input
                   type='text'
                   placeholder='Phone Number'
                   name='description'
                   className='form-control'
-                  value={student.description}
+                  value={course.description}
                   onChange={onChange}
                 />
-              </div>
-              <div className='admin-form-group'>
+              </div> */}
+              {/* <div className='admin-form-group'>
                 <input
                   type='date'
                   placeholder='published_date'
                   name='published_date'
                   className='form-control'
-                  value={student.published_date}
+                  value={course.published_date}
                   onChange={onChange}
                 />
-              </div>
+              </div> */}
               <br />
-              <div className='add-stu-submit-button text-center'>
+              <div className='add-cou-submit-button text-center'>
                 {/* Wrap the button in a centered container */}
                 <div className='d-flex justify-content-center'>
-                  <Link to='/showstudent' className='btn btn-outline-warning'>
+                  <Link to='/showcourse' className='btn btn-outline-warning'>
                     Submit
                   </Link>
                 </div>
@@ -129,4 +129,4 @@ const AddStudent = (props) => {
   );
 };
 
-export default AddStudent;
+export default AddCourse;

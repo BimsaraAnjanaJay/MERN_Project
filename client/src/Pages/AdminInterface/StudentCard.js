@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './StudentCard.css';
+import './Card.css';
 
 const StudentCard = (props) => {
   const student = props.student;
