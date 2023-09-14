@@ -9,12 +9,11 @@ const AddLecturer = (props) => {
 
   const navigate = useNavigate();
   const [lecturer, setLecturer] = useState({
-    title: '',
-    isbn: '',
-    author: '',
-    description: '',
-    published_date: '',
-    publisher: '',
+    name: '',
+    userId: '',
+    email: '',
+    password: '',
+    userRole: 'lecturer',
   });
 
   const onChange = (e) => {
@@ -28,12 +27,11 @@ const AddLecturer = (props) => {
       .post('http://localhost:8082/api/lecturer', lecturer)
       .then((res) => {
         setLecturer({
-          title: '',
-          isbn: '',
-          author: '',
-          description: '',
-          published_date: '',
-          publisher: '',
+          name: '',
+          userId: '',
+          email: '',
+          password: '',
+          userRole: 'lecturer',
         });
 
         // Push to /
@@ -63,9 +61,9 @@ const AddLecturer = (props) => {
                 <input
                   type='text'
                   placeholder='Name of the Lecturer'
-                  name='title'
+                  name='name'
                   className='form-control'
-                  value={lecturer.title}
+                  value={lecturer.name}
                   onChange={onChange}
                 />
               </div>
@@ -74,9 +72,9 @@ const AddLecturer = (props) => {
                 <input
                   type='text'
                   placeholder='Index Number'
-                  name='isbn'
+                  name='userId'
                   className='form-control'
-                  value={lecturer.isbn}
+                  value={lecturer.userId}
                   onChange={onChange}
                 />
               </div>
@@ -85,9 +83,9 @@ const AddLecturer = (props) => {
                 <input
                   type='text'
                   placeholder='E-mail'
-                  name='author'
+                  name='email'
                   className='form-control'
-                  value={lecturer.author}
+                  value={lecturer.email}
                   onChange={onChange}
                 />
               </div>
@@ -96,19 +94,9 @@ const AddLecturer = (props) => {
                 <input
                   type='text'
                   placeholder='Phone Number'
-                  name='description'
+                  name='password'
                   className='form-control'
-                  value={lecturer.description}
-                  onChange={onChange}
-                />
-              </div>
-              <div className='admin-form-group'>
-                <input
-                  type='date'
-                  placeholder='published_date'
-                  name='published_date'
-                  className='form-control'
-                  value={lecturer.published_date}
+                  value={lecturer.password}
                   onChange={onChange}
                 />
               </div>

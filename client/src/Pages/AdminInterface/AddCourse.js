@@ -10,11 +10,11 @@ const AddCourse = (props) => {
   const navigate = useNavigate();
   const [course, setCourse] = useState({
     title: '',
-    isbn: '',
-    author: '',
+    courseId: '',
+    teacher: '',
     description: '',
-    published_date: '',
-    publisher: '',
+    students: '',
+    submissionLinks: '',
   });
 
   const onChange = (e) => {
@@ -29,11 +29,11 @@ const AddCourse = (props) => {
       .then((res) => {
         setCourse({
           title: '',
-          isbn: '',
-          author: '',
+          courseId: '',
+          teacher: '',
           description: '',
-          published_date: '',
-          publisher: '',
+          students: '',
+          submissionLinks: '',
         });
 
         // Push to /
@@ -73,48 +73,59 @@ const AddCourse = (props) => {
               <div className='admin-form-group'>
                 <input
                   type='text'
-                  placeholder='Course Number'
-                  name='isbn'
+                  placeholder='Course Id'
+                  name='courseId'
                   className='form-control'
-                  value={course.isbn}
+                  value={course.courseId}
                   onChange={onChange}
                 />
               </div>
 
-              {/* <div className='admin-form-group'>
+              <div className='admin-form-group'>
                 <input
                   type='text'
-                  placeholder='E-mail'
-                  name='author'
+                  placeholder='Lecturer'
+                  name='teacher'
                   className='form-control'
-                  value={course.author}
+                  value={course.teacher}
                   onChange={onChange}
                 />
-              </div> */}
+              </div> 
 
-              {/* <div className='admin-form-group'>
+              <div className='admin-form-group'>
                 <input
                   type='text'
-                  placeholder='Phone Number'
+                  placeholder='Description'
                   name='description'
                   className='form-control'
                   value={course.description}
                   onChange={onChange}
                 />
-              </div> */}
-              {/* <div className='admin-form-group'>
+              </div>
+              <div className='admin-form-group'>
                 <input
-                  type='date'
-                  placeholder='published_date'
-                  name='published_date'
+                  type='text'
+                  placeholder='students'
+                  name='students'
                   className='form-control'
-                  value={course.published_date}
+                  value={course.students}
                   onChange={onChange}
                 />
-              </div> */}
+              </div>
+              <br />
+              <div className='admin-form-group'>
+                <input
+                  type='text'
+                  placeholder='submissionLinks'
+                  name='submissionLinks'
+                  className='form-control'
+                  value={course.submissionLinks}
+                  onChange={onChange}
+                />
+              </div>
               <br />
               <div className='add-cou-submit-button text-center'>
-                {/* Wrap the button in a centered container */}
+                 {/* Wrap the button in a centered container  */}
                 <div className='d-flex justify-content-center'>
                   <Link to='/showcourse' className='btn btn-outline-warning'>
                     Submit
