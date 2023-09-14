@@ -22,6 +22,16 @@ import EditStudent from './Pages/AdminInterface/EditStudent';
 import ShowStudent from './Pages/AdminInterface/ShowStudent';
 import StudentsRecord from './Pages/AdminInterface/StudentsRecord';
 
+import AddLecturer from './Pages/AdminInterface/AddLecturer';
+import EditLecturer from './Pages/AdminInterface/EditLecturer';
+import ShowLecturer from './Pages/AdminInterface/ShowLecturer';
+import LecturersRecord from './Pages/AdminInterface/LecturersRecord';
+
+import AddCourse from './Pages/AdminInterface/AddCourse';
+import EditCourse from './Pages/AdminInterface/EditCourse';
+import ShowCourse from './Pages/AdminInterface/ShowCourse';
+import CoursesRecord from './Pages/AdminInterface/CoursesRecord';
+
 function App() {
   const handleLogin = (role) => {
     console.log(`User logged in as ${role}`);
@@ -50,6 +60,16 @@ function App() {
             <Route path="/editstudent" element={<EditStudent />} />
             <Route path="/showstudent" element={<ShowStudent />} />
             <Route path="/studentsrecord" element={<StudentsRecord />} />
+
+            <Route path="/addlecturer" element={<AddLecturer />} />
+            <Route path="/editlecturer" element={<EditLecturer />} />
+            <Route path="/showlecturer" element={<ShowLecturer />} />
+            <Route path="/lecturersrecord" element={<LecturersRecord />} />
+
+            <Route path="/addcourse" element={<AddCourse />} />
+            <Route path="/editcourse" element={<EditCourse />} />
+            <Route path="/showcourse" element={<ShowCourse />} />
+            <Route path="/coursesrecord" element={<CoursesRecord />} />
         </Routes>
       </div>
     </Router>
