@@ -11,6 +11,8 @@ function Login({ onLogin }) {
   const handleSubmit = (e) => {
     e.preventDefault();
 
+    /////////////////////////
+
     // Mock login logic - replace with your actual authentication logic
     if (email === 'lec@example.com' && password === '123') {
       onLogin('lecturer'); // Set the user role to 'lecturer'
@@ -28,6 +30,8 @@ function Login({ onLogin }) {
       setError('Invalid email or password');
     }
   };
+  
+  //////////////////////////////////
 
   return (
     <div class="login_center">

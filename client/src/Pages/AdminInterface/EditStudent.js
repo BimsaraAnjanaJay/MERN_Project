@@ -5,12 +5,9 @@ import './Edit.css';
 
 function EditStudent(props) {
   const [student, setStudent] = useState({
-    title: '',
-    isbn: '',
-    author: '',
-    description: '',
-    published_date: '',
-    publisher: '',
+    name: '',
+    email: '',
+    password: ''
   });
 
   const { id } = useParams();
@@ -18,15 +15,12 @@ function EditStudent(props) {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:8082/api/student/${id}`)
+      .get(`http://localhost:8082/admin/user/${id}`)
       .then((res) => {
         setStudent({
-          title: res.data.title,
-          isbn: res.data.isbn,
-          author: res.data.author,
-          description: res.data.description,
-          published_date: res.data.published_date,
-          publisher: res.data.publisher,
+          name: res.data.name,
+          email: res.data.email,
+          password: res.data.password
         });
       })
       .catch((err) => {
@@ -42,16 +36,13 @@ function EditStudent(props) {
     e.preventDefault();
 
     const data = {
-      title: student.title,
-      isbn: student.isbn,
-      author: student.author,
-      description: student.description,
-      published_date: student.published_date,
-      publisher: student.publisher,
+      name: student.name,
+      email: student.email,
+      password: student.password
     };
 
     axios
-      .put(`http://localhost:8082/api/student/${id}`, data)
+      .put(`http://localhost:8082/admin/user/update/${id}`, data)
       .then((res) => {
         navigate(`/show-student/${id}`);
       })

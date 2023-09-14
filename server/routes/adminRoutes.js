@@ -18,10 +18,10 @@ const {
 
 
 router.route('/user').get(getAllUsers)
-router.route('/user/:id').get(getOneUser)
+router.route('/user/:userId').get(getOneUser)
 router.route('/user/create').post(createUser)
-router.route('/user/update/:id').put(updateUser)
-router.route('/user/delete/:id').delete(deleteUser)
+router.route('/user/update/:userId').put(updateUser)
+router.route('/user/delete/:userId').delete(deleteUser)
 
 router.route('/course').get(getAllCourses)
 router.route('/course/:courseId').get(getOneCourse);

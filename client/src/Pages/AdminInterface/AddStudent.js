@@ -14,7 +14,6 @@ const AddStudent = (props) => {
     email: '',
     password: '',
     userRole: 'student',
-    
   });
 
   const onChange = (e) => {
@@ -25,7 +24,7 @@ const AddStudent = (props) => {
     e.preventDefault();
 
     axios
-      .post('http://localhost:8082/api/student', student)
+      .post('http://localhost:9000/admin/user/create', users)
       .then((res) => {
         setStudent({
           name: '',

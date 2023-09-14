@@ -12,6 +12,13 @@
     flex-direction: column;
     margin: 80px 10px 5px 10px;
     transition: margin-left 0.3s;
+    height: 100vh;
+    left: 250px;
+    /* width: calc(100% - 250px);*/
+
+    font-size: 30px;
+    font-weight: 500;
+    /* padding: 8px 40px; */
 }
 
 .stu_home_card-container01,
@@ -58,7 +65,6 @@
 }
 
 .stu_home_card-container0201 {
-  /* height: 186px; */
   font-size: 20px;
 }
 
@@ -72,4 +78,9 @@
   .studenthome.with-sidebar {
     margin-left: 211px;
   }
+} */
+
+/* .sidebar.with-sidebar ~ .studenthome{
+  width: calc(100% - (-150px)); 
+  max-width: 70%;
 } */

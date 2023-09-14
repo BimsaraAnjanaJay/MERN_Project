@@ -151,9 +151,9 @@ const uploadCourseMaterial = async (req, res) => {
     }
 
     const newFile = new courseMaterialsModel({
-        courseId: req.params.courseId,
+        courseId: courseId,
         filename: req.body.filename,
-        file: req.file.path
+        fileData: req.file.path
     });
 
     await newFile.save()
