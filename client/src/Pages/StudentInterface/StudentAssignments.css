@@ -2,23 +2,34 @@
    .stu_ass-table {
     width: 80%;
     border-collapse: collapse;
-    background-color: #fff;
+    background-color: #9885cb;
     border-radius: 5px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin: 20px auto; /* Center the table horizontally */
-    margin-top: 300px;
+    margin: 20px auto;
+    margin-top: 150px;
+    outline-color: black;
+    outline-width: 3px;
+    outline-style: groove;
   }
   
   .stu_ass-table th,
   .stu_ass-table td {
     padding: 12px 15px;
     text-align: left;
+    outline-color: black;
+    outline-style: groove;
+    outline-width: 1px;
   }
   
   /* Style for table headers */
   .stu_ass-table th {
-    background-color: #f5f5f5;
+    background-color: #ffffff;
     font-weight: bold;
+    color: black;
+    outline-color: black;
+    outline-style: groove;
+    outline-width: 1px;
+    text-align: center;
   }
   
   /* Style for table rows */
@@ -28,7 +39,7 @@
   
   /* Style for table row hover effect */
   .stu_ass-table tbody tr:hover {
-    background-color: #f2f2f2;
+    background-color: #8daee3;
   }
   
   /* Style for action buttons in table cells */
@@ -43,6 +54,7 @@
   
   /* Style for view button */
   .stu_ass-view-button {
+    margin-left: 10px;
     background-color: #4285f4;
     color: #fff;
   }
@@ -51,12 +63,17 @@
   .stu_ass-upload-button {
     background-color: #4caf50;
     color: #fff;
+    margin-right: -10px;
+    margin-left: 19px;
   }
   
   /* Style for delete button */
   .stu_ass-delete-button {
     background-color: #f44336;
     color: #fff;
+    margin-top: 5px;
+    margin-right: -10px;
+    margin-left: 19px;
   }
   
   /* Style for action buttons on hover */
@@ -66,6 +83,6 @@
   
   /* Style for action buttons text color on hover */
   .stu_ass-table td button:hover .stu_ass-delete-button {
-    color: #fff;
+    color: #6a8dc5;
   }
   
