@@ -104,7 +104,7 @@ const AddCourse = (props) => {
               </div>
               <div className='admin-form-group'>
                 <input
-                  type='date'
+                  type='text'
                   placeholder='students'
                   name='students'
                   className='form-control'
@@ -115,7 +115,7 @@ const AddCourse = (props) => {
               <br />
               <div className='admin-form-group'>
                 <input
-                  type='date'
+                  type='text'
                   placeholder='submissionLinks'
                   name='submissionLinks'
                   className='form-control'
