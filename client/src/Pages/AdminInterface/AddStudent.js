@@ -13,7 +13,7 @@ const AddStudent = (props) => {
     email: '',
     password: '',
     userId: '',
-    userRole: ''
+    userRole: 'student'
   });
 
   const onChange = (e) => {
