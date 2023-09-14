@@ -9,11 +9,10 @@ const AddStudent = (props) => {
 
   const navigate = useNavigate();
   const [student, setStudent] = useState({
-    name: '',
+    userId: '',
     email: '',
     password: '',
-    userId: '',
-    userRole: 'student'
+    userRole: 'student',
   });
 
   const onChange = (e) => {
