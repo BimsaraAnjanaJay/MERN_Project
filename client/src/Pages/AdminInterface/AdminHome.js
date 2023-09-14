@@ -40,7 +40,7 @@ function AdminHome() {
             <div class="centered">
                 <h2>Lecturers</h2>
                 <p>Create Read<br />Update Delete<br />Lecturer</p>
-                <Link to='/showlecturer'className='admin-home-crud-button'>
+                <Link to='/addlecturers'className='admin-home-crud-button'>
                 CRUD Lecturer
                 </Link>
             </div>
@@ -50,7 +50,7 @@ function AdminHome() {
             <div class="centered">
               <h2 style={{padding: '0px 0px 0px 5px'}}>Courses</h2>
                 <p>Create Read<br />Update Delete<br />Courses</p>
-                <Link to='/showcourse' className='admin-home-crud-button'>
+                <Link to='/addcourses' className='admin-home-crud-button'>
                 CRUD Courses
                 </Link>
             </div>

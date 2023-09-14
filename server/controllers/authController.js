@@ -6,15 +6,19 @@ const login = async (req, res) => {
     const { email, password } = req.body;
 
     if (!email || !password) 
-        return (res.status(404).json({ mssg: 'All fields are required' }))
+        return (res.status(404).json({ msg: 'All fields are required' }))
 
     const user = await userModel.findOne({ email }).exec()
-    if (!user) 
+    if (!user) {
+        console.log(user);
         return (res.status(401).json({ error: 'Unauthorized' }))
+    }
 
     const match = await bcrypt.compare(password, user.password)
-    if (!match) 
+    if (!match){
+        console.log("password error");
         return (res.status(401).json({ error: 'Unauthorized' }))
+    } 
 
     const access_token = jwt.sign({
         "userInfo": { 
@@ -27,13 +31,14 @@ const login = async (req, res) => {
     { expiresIn: '15mins' })
 
     const refresh_token = jwt.sign({
-        "name": user.name
+        "name": user.name,
+        "userRole": user.userRole 
     },
     process.env.REFRESH_TOKEN_KEY,
     { expiresIn: '7d' })
 
     res.cookie('jwt', refresh_token, {
-        httpOnly: true,
+        httpOnly: false,
         secure: true,
         sameSite: 'None',
         maxAge: 7*24*60*60*1000
@@ -80,7 +85,7 @@ const logout = (req, res) => {
     const cookies = req.cookies
 
     if (!cookies?.jwt) 
-        return res.sendStatus(204)
+        return res.sendStatus(204).json({ message: 'No Cookies' })
 
     res.clearCookie('jwt', { 
         httpOnly: true, 

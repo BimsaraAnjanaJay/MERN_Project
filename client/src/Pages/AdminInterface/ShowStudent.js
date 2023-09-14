@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './Show.css';
+import './ShowStudent.css';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import StudentCard from './StudentCard';
@@ -9,7 +9,7 @@ function ShowStudent() {
 
   useEffect(() => {
     axios
-      .get('http://localhost:8082/admin/user')
+      .get('http://localhost:8082/api/student')
       .then((res) => {
         setStudent(res.data);
       })

@@ -1,13 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useParams, useNavigate } from 'react-router-dom';
 import axios from 'axios';
-import './Edit.css';
+import './EditStudent.css';
 
 function EditStudent(props) {
   const [student, setStudent] = useState({
-    name: '',
-    email: '',
-    password: ''
+    title: '',
+    isbn: '',
+    author: '',
+    description: '',
+    published_date: '',
+    publisher: '',
   });
 
   const { id } = useParams();
@@ -15,12 +18,15 @@ function EditStudent(props) {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:8082/admin/user/${id}`)
+      .get(`http://localhost:8082/api/student/${id}`)
       .then((res) => {
         setStudent({
-          name: res.data.name,
-          email: res.data.email,
-          password: res.data.password
+          title: res.data.title,
+          isbn: res.data.isbn,
+          author: res.data.author,
+          description: res.data.description,
+          published_date: res.data.published_date,
+          publisher: res.data.publisher,
         });
       })
       .catch((err) => {
@@ -36,13 +42,16 @@ function EditStudent(props) {
     e.preventDefault();
 
     const data = {
-      name: student.name,
-      email: student.email,
-      password: student.password
+      title: student.title,
+      isbn: student.isbn,
+      author: student.author,
+      description: student.description,
+      published_date: student.published_date,
+      publisher: student.publisher,
     };
 
     axios
-      .put(`http://localhost:8082/admin/user/update/${id}`, data)
+      .put(`http://localhost:8082/api/student/${id}`, data)
       .then((res) => {
         navigate(`/show-student/${id}`);
       })
