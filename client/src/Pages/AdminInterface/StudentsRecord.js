@@ -11,7 +11,7 @@ function StudentsRecord(props) {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:8082/api/student/${id}`)
+      .get(`http://localhost:8082/admin/user/${id}`)
       .then((res) => {
         setStudent(res.data);
       })
@@ -22,7 +22,7 @@ function StudentsRecord(props) {
 
   const onDeleteClick = (id) => {
     axios
-      .delete(`http://localhost:8082/api/students/${id}`)
+      .delete(`http://localhost:8082/admin/user/delete/${id}`)
       .then((res) => {
         navigate('/');
       })
