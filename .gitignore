@@ -3,3 +3,5 @@ client/frontend/node_modules
 server/node_modules
 client/node_modules
 node_modules
+Admin.postman_collection.json
+Auth.postman_collection.json

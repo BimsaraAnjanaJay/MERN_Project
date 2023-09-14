@@ -1,0 +1,272 @@
+{
+	"info": {
+		"_postman_id": "3a1b4db2-2969-4f58-98a8-2a39acba4bf9",
+		"name": "Auth",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29627670",
+		"_collection_link": "https://planetary-shadow-204519.postman.co/workspace/4392beb4-3812-4936-8512-eccc2fc2e3da/collection/29602606-3a1b4db2-2969-4f58-98a8-2a39acba4bf9?action=share&source=collection_link&creator=29627670"
+	},
+	"item": [
+		{
+			"name": "log in",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "lumbini@gmail",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "lumbini123",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5000/auth",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"auth"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "log in",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "lumbini@gmail",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "lumbini123",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:5000/auth",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"auth"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoibHVtYmluaSIsImlhdCI6MTY5NDI2OTg3NywiZXhwIjoxNjk0ODc0Njc3fQ.cNXTMrUtvYFIPtjxc4fi9cFx7cWUmkjGzq0XkT2igqk; Max-Age=604800; Path=/; Expires=Sat, 16 Sep 2023 14:31:17 GMT; HttpOnly; Secure; SameSite=None"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "240"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"f0-+cPaX7HAJwnXX8wzzoQHlv/0+LE\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 09 Sep 2023 14:31:17 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySW5mbyI6eyJuYW1lIjoibHVtYmluaSIsImVtYWlsIjoibHVtYmluaUBnbWFpbCIsInVzZXJSb2xlIjoic3R1ZGVudCJ9LCJpYXQiOjE2OTQyNjk4NzcsImV4cCI6MTY5NDI3MDc3N30.TUQ0b0PX0I7Uf_RIHCk5hSB47KBG-CR8ODqk7-25MuA\"\n}"
+				}
+			]
+		},
+		{
+			"name": "refresh",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/auth/refresh",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"auth",
+						"refresh"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "refresh",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/auth/refresh",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"auth",
+								"refresh"
+							]
+						}
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "24"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"18-XPDV80vbMk4yY1/PADG4jYM4rSI\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 09 Sep 2023 14:32:23 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"error\": \"Unauthorized\"\n}"
+				}
+			]
+		},
+		{
+			"name": "logout",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/auth/logout",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"auth",
+						"logout"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "logout",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/auth/logout",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"auth",
+								"logout"
+							]
+						}
+					},
+					"status": "No Content",
+					"code": 204,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"a-bAsFyilMr4Ra1hIU5PyoyFRunpI\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 09 Sep 2023 14:33:41 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": null
+				}
+			]
+		}
+	]
+}

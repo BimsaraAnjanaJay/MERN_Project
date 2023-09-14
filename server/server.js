@@ -11,15 +11,17 @@ const path = require('path')
 const admin = require('./routes/adminRoutes')
 const student = require('./routes/studentRoutes')
 const lecturer = require('./routes/lecturerRoutes')
-const authentication = require('./routes/authRoutes')
+const authentication = require('./routes/authRoutes');
+const cookieParser = require("cookie-parser");
 
 const PORT = process.env.PORT || 5000;
 dbConnect;
 
+app.use(cookieParser())
 app.use(morgan('dev'))
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(cors());
+app.use(express.json());
+// app.use(bodyParser.urlencoded({ extended: false }));
+app.use(cors({origin: "http://localhost:3000", credentials:true}));
 
 app.use(express.static(path.join(__dirname, '..', 'build')));
 

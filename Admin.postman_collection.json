@@ -1,0 +1,902 @@
+{
+	"info": {
+		"_postman_id": "c0a24d7f-9a11-4656-adf7-c33f7e43db50",
+		"name": "Admin",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29627670",
+		"_collection_link": "https://planetary-shadow-204519.postman.co/workspace/4392beb4-3812-4936-8512-eccc2fc2e3da/collection/29602606-c0a24d7f-9a11-4656-adf7-c33f7e43db50?action=share&source=collection_link&creator=29627670"
+	},
+	"item": [
+		{
+			"name": "Create user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "lumbini@gmail",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "lumbini123",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "lumbini",
+							"type": "text"
+						},
+						{
+							"key": "userId",
+							"value": "001",
+							"type": "text"
+						},
+						{
+							"key": "userRole",
+							"value": "student",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5000/admin/user/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"admin",
+						"user",
+						"create"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Create user",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "lumbini@gmail",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "lumbini123",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "lumbini",
+									"type": "text"
+								},
+								{
+									"key": "userId",
+									"value": "001",
+									"type": "text"
+								},
+								{
+									"key": "userRole",
+									"value": "student",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:5000/admin/user/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"admin",
+								"user",
+								"create"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "21"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"15-3FwzSqxGtGYkpZpefdrAKcsMpOc\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 09 Sep 2023 12:01:13 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "\"User already exists\""
+				}
+			]
+		},
+		{
+			"name": "Update user",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/admin/user/update/64fc50cb712ed3e89fa18920",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"admin",
+						"user",
+						"update",
+						"64fc50cb712ed3e89fa18920"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/admin/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"admin",
+						"user"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "get all users",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/admin/user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"admin",
+								"user"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "207"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"cf-K0PCo71jE826/f5AuSLvKXHS1wo\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 09 Sep 2023 12:01:00 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"studentInfo\": [\n        {\n            \"_id\": \"64fc50cb712ed3e89fa18920\",\n            \"name\": \"lumbini\",\n            \"email\": \"lumbini@gmail\",\n            \"password\": \"$2a$10$/Cb58i/qttjnYHIAjCTl8ud3LoajRCffZv6kd7YgxLmrfDkUgln/O\",\n            \"userId\": 1,\n            \"userRole\": \"student\",\n            \"__v\": 0\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "get one user",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/admin/user/64fc50cb712ed3e89fa18920",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"admin",
+						"user",
+						"64fc50cb712ed3e89fa18920"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete user",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/admin/user/delete/64fc50cb712ed3e89fa18920",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"admin",
+						"user",
+						"delete",
+						"64fc50cb712ed3e89fa18920"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "delete user",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/admin/user/delete/64fc50cb712ed3e89fa18920",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"admin",
+								"user",
+								"delete",
+								"64fc50cb712ed3e89fa18920"
+							]
+						}
+					},
+					"status": "Internal Server Error",
+					"code": 500,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "38"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"26-HhHMwDk5bFhtA6PXRyzrlcJU+1Q\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 09 Sep 2023 11:58:19 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"Unable to delete the user\"\n}"
+				}
+			]
+		},
+		{
+			"name": "create course",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "title",
+							"value": "dsa",
+							"type": "text"
+						},
+						{
+							"key": "courseId",
+							"value": "22",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "dsa",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5000/admin/course/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"admin",
+						"course",
+						"create"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "create course",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "title",
+									"value": "dsa",
+									"type": "text"
+								},
+								{
+									"key": "courseId",
+									"value": "22",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "data structure",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:5000/admin/course/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"admin",
+								"course",
+								"create"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "23"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"17-RUPDLqM7Vis2g+9QMNGZkaBF9lw\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 09 Sep 2023 14:08:08 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"mssg\": \"Course Added\"\n}"
+				}
+			]
+		},
+		{
+			"name": "get all courses",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/admin/course",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"admin",
+						"course"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "get all courses",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/admin/course",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"admin",
+								"course"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "155"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"9b-5EkdYc4f3borb+iFiikWQPgLL8k\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 09 Sep 2023 14:10:07 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"courseInfo\": [\n        {\n            \"_id\": \"64fc7c48ca65a995e9c90428\",\n            \"title\": \"dsa\",\n            \"courseId\": \"22\",\n            \"description\": \"data structure\",\n            \"students\": [],\n            \"submissionLinks\": [],\n            \"__v\": 0\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "get one course",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/admin/course/64fc7eb8ca65a995e9c90430",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"admin",
+						"course",
+						"64fc7eb8ca65a995e9c90430"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "get one course",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/admin/course/64fc7c48ca65a995e9c90428",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"admin",
+								"course",
+								"64fc7c48ca65a995e9c90428"
+							]
+						}
+					},
+					"status": "Internal Server Error",
+					"code": 500,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "35"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"23-OBw6E4FLjYQt4mo8ArqhWH0VGJs\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 09 Sep 2023 14:13:55 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Internal Server Error\"\n}"
+				}
+			]
+		},
+		{
+			"name": "delete course",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/admin/course/delete/64fc7c48ca65a995e9c90428",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"admin",
+						"course",
+						"delete",
+						"64fc7c48ca65a995e9c90428"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "delete course",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/admin/course/delete/64fc7c48ca65a995e9c90428",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"admin",
+								"course",
+								"delete",
+								"64fc7c48ca65a995e9c90428"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "41"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"29-OZ1xFZ+tffeDcmAYW7YO2epN7X0\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 09 Sep 2023 14:17:13 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Course deleted successfully\"\n}"
+				}
+			]
+		},
+		{
+			"name": "assign lecturer",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/admin/course/64fc7eb8ca65a995e9c90430/lecturer/64fc7fce5138986c452e9ab5/assign",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"admin",
+						"course",
+						"64fc7eb8ca65a995e9c90430",
+						"lecturer",
+						"64fc7fce5138986c452e9ab5",
+						"assign"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "assign lecturer",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/admin/course/64fc7eb8ca65a995e9c90430/lecturer/64fc7fce5138986c452e9ab5/assign",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"admin",
+								"course",
+								"64fc7eb8ca65a995e9c90430",
+								"lecturer",
+								"64fc7fce5138986c452e9ab5",
+								"assign"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "58"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"3a-X3SihGY21MW8GffZRBEDJQMerwo\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 09 Sep 2023 14:26:50 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Lecturer assigned to the course successfully\"\n}"
+				}
+			]
+		},
+		{
+			"name": "enroll student",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/admin/course/64fc7eb8ca65a995e9c90430/student/64fc50cb712ed3e89fa18920/enroll",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"admin",
+						"course",
+						"64fc7eb8ca65a995e9c90430",
+						"student",
+						"64fc50cb712ed3e89fa18920",
+						"enroll"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "enroll student",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/admin/course/64fc7eb8ca65a995e9c90430/student/64fc50cb712ed3e89fa18920/enroll",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"admin",
+								"course",
+								"64fc7eb8ca65a995e9c90430",
+								"student",
+								"64fc50cb712ed3e89fa18920",
+								"enroll"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "57"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"39-W1rHnQMZL0CULxKz4RSMb1ClWSA\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 09 Sep 2023 14:28:53 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Student enrolled in the course successfully\"\n}"
+				}
+			]
+		}
+	]
+}
