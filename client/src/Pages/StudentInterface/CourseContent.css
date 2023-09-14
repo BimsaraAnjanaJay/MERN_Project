@@ -34,7 +34,7 @@
   /* Style for course material items */
   .course_content li {
     margin: 10px 0;
-    padding: 5px;
+    padding: 15px;
     background-color: #fff;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -46,11 +46,17 @@
   .course_content a {
     text-decoration: none;
     font-weight: bold;
-    color: #007bff; /* Blue color for links */
+    color: #000000b3; /* Blue color for links */
   }
   
   /* Style for course material links on hover */
   .course_content a:hover {
     text-decoration: underline;
+  }
+
+  .course_content h2 {
+    font-size: 60px;
+    font-weight: bold;
+    margin-bottom: 200px;
   }
   
