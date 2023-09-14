@@ -7,7 +7,7 @@ export default function StudentHome() {
   const showSidebar = () => setSidebar(!sidebar);
 
   return (
-    <div className={`studenthome ${sidebar ? 'with-sidebar' : ''}`}>
+      <div className={`studenthome ${sidebar ? 'with-sidebar' : ''}`}>
           <NavSideBar sidebar={sidebar} setSidebar={setSidebar} />
           <div className={`stu_home_card-container ${sidebar ? 'with-sidebar' : ''}`}>
           </div>  

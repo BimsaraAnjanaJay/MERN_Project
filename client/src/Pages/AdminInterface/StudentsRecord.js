@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useParams, useNavigate } from 'react-router-dom';
-import './Records.css';
+import './StudentsRecord.css';
 import axios from 'axios';
 
 function StudentsRecord(props) {
@@ -11,7 +11,7 @@ function StudentsRecord(props) {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:8082/admin/user/${id}`)
+      .get(`http://localhost:8082/api/student/${id}`)
       .then((res) => {
         setStudent(res.data);
       })
@@ -22,7 +22,7 @@ function StudentsRecord(props) {
 
   const onDeleteClick = (id) => {
     axios
-      .delete(`http://localhost:8082/admin/user/delete/${id}`)
+      .delete(`http://localhost:8082/api/students/${id}`)
       .then((res) => {
         navigate('/');
       })
