@@ -9,6 +9,7 @@ const AddStudent = (props) => {
 
   const navigate = useNavigate();
   const [student, setStudent] = useState({
+    name: '',
     userId: '',
     email: '',
     password: '',
