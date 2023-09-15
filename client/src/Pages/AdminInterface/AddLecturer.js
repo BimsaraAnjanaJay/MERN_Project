@@ -1,69 +1,69 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
-import './AddStudent.css';
+import './Add.css';
 
 import { useNavigate } from 'react-router-dom';
 
-const AddStudent = (props) => {
+const AddLecturer = (props) => {
 
   const navigate = useNavigate();
-  const [student, setStudent] = useState({
+  const [lecturer, setLecturer] = useState({
     name: '',
     userId: '',
     email: '',
     password: '',
-    userRole: '',
+    userRole: ''
   });
 
   const onChange = (e) => {
-    setStudent({ ...student, [e.target.name]: e.target.value });
+    setLecturer({ ...lecturer, [e.target.name]: e.target.value });
   };
 
   const onSubmit = (e) => {
     e.preventDefault();
 
     axios
-      .post('http://localhost:8082/api/student', student)
+      .post('http://localhost:8082/api/lecturer', lecturer)
       .then((res) => {
-        setStudent({
+        setLecturer({
           name: '',
           userId: '',
           email: '',
           password: '',
-          userRole: ''
+          userRole: '',
         });
 
         // Push to /
         navigate('/');
       })
       .catch((err) => {
-        console.log('Error in AddStudent!');
+        console.log('Error in AddLecturer!');
       });
   };
 
   return (
-    <div className='addstudent'>
-      <div className='add-stu-container'>
+    <div className='addlecturer'>
+      <div className='add-lec-container'>
         <div className='row'>
           <div className='col-md-8 m-auto'>
             <br />
-            <Link to='/showstudent' className='btn btn-outline-warning float-left'>
-              Show Students List
+            <Link to='/showlecturer' className='btn btn-outline-warning float-left'>
+              Show Lecturers List
             </Link>
           </div>
           <div className='col-md-8 m-auto'>
-            <h1 className='display-4 text-center'>Add Student</h1>
-            <p className='lead text-center'>Create new Student</p>
+            <h1 className='display-4 text-center'>Add Lecturer</h1>
+            <p className='lead text-center'>Create new Lecturer</p>
 
             <form noValidate onSubmit={onSubmit}>
               <div className='admin-form-group'>
                 <input
                   type='text'
-                  placeholder='Name of the Student'
+                  placeholder='Name of the Lecturer'
                   name='name'
                   className='form-control'
-                  value={student.name}
+                  value={lecturer.name}
                   onChange={onChange}
                 />
               </div>
@@ -74,7 +74,7 @@ const AddStudent = (props) => {
                   placeholder='Index Number'
                   name='userId'
                   className='form-control'
-                  value={student.userId}
+                  value={lecturer.userId}
                   onChange={onChange}
                 />
               </div>
@@ -85,7 +85,7 @@ const AddStudent = (props) => {
                   placeholder='E-mail'
                   name='email'
                   className='form-control'
-                  value={student.email}
+                  value={lecturer.email}
                   onChange={onChange}
                 />
               </div>
@@ -96,25 +96,22 @@ const AddStudent = (props) => {
                   placeholder='Phone Number'
                   name='password'
                   className='form-control'
-                  value={student.password}
+                  value={lecturer.password}
                   onChange={onChange}
                 />
               </div>
               <div className='admin-form-group'>
-                <input
+                {/* <input
                   type='date'
-                  placeholder=''
-                  name=''
-                  className='form-control'
-                  //value={student.}
-                  onChange={onChange}
-                />
+                  placehold               na               className='form-control'
+                  value={lectu               onChange={onChange}
+                /> */}
               </div>
               <br />
-              <div className='add-stu-submit-button text-center'>
+              <div className='add-lec-submit-button text-center'>
                 {/* Wrap the button in a centered container */}
                 <div className='d-flex justify-content-center'>
-                  <Link to='/showstudent' className='btn btn-outline-warning'>
+                  <Link to='/showlecturer' className='btn btn-outline-warning'>
                     Submit
                   </Link>
                 </div>
@@ -127,4 +124,4 @@ const AddStudent = (props) => {
   );
 };
 
-export default AddStudent;
+export default AddLecturer;
