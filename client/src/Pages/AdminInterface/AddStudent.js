@@ -9,12 +9,11 @@ const AddStudent = (props) => {
 
   const navigate = useNavigate();
   const [student, setStudent] = useState({
-    title: '',
-    isbn: '',
-    author: '',
-    description: '',
-    published_date: '',
-    publisher: '',
+    name: '',
+    userId: '',
+    email: '',
+    password: '',
+    userRole: '',
   });
 
   const onChange = (e) => {
@@ -28,12 +27,11 @@ const AddStudent = (props) => {
       .post('http://localhost:8082/api/student', student)
       .then((res) => {
         setStudent({
-          title: '',
-          isbn: '',
-          author: '',
-          description: '',
-          published_date: '',
-          publisher: '',
+          name: '',
+          userId: '',
+          email: '',
+          password: '',
+          userRole: ''
         });
 
         // Push to /
@@ -63,9 +61,9 @@ const AddStudent = (props) => {
                 <input
                   type='text'
                   placeholder='Name of the Student'
-                  name='title'
+                  name='name'
                   className='form-control'
-                  value={student.title}
+                  value={student.name}
                   onChange={onChange}
                 />
               </div>
@@ -74,9 +72,9 @@ const AddStudent = (props) => {
                 <input
                   type='text'
                   placeholder='Index Number'
-                  name='isbn'
+                  name='userId'
                   className='form-control'
-                  value={student.isbn}
+                  value={student.userId}
                   onChange={onChange}
                 />
               </div>
@@ -85,9 +83,9 @@ const AddStudent = (props) => {
                 <input
                   type='text'
                   placeholder='E-mail'
-                  name='author'
+                  name='email'
                   className='form-control'
-                  value={student.author}
+                  value={student.email}
                   onChange={onChange}
                 />
               </div>
@@ -96,19 +94,19 @@ const AddStudent = (props) => {
                 <input
                   type='text'
                   placeholder='Phone Number'
-                  name='description'
+                  name='password'
                   className='form-control'
-                  value={student.description}
+                  value={student.password}
                   onChange={onChange}
                 />
               </div>
               <div className='admin-form-group'>
                 <input
                   type='date'
-                  placeholder='published_date'
-                  name='published_date'
+                  placeholder=''
+                  name=''
                   className='form-control'
-                  value={student.published_date}
+                  //value={student.}
                   onChange={onChange}
                 />
               </div>

@@ -10,11 +10,8 @@ const AddCourse = (props) => {
   const navigate = useNavigate();
   const [course, setCourse] = useState({
     title: '',
-    isbn: '',
-    author: '',
-    description: '',
-    published_date: '',
-    publisher: '',
+    userId: '',
+    description: ''
   });
 
   const onChange = (e) => {
@@ -29,7 +26,7 @@ const AddCourse = (props) => {
       .then((res) => {
         setCourse({
           title: '',
-          isbn: '',
+          userId: '',
           author: '',
           description: '',
           published_date: '',
@@ -74,9 +71,9 @@ const AddCourse = (props) => {
                 <input
                   type='text'
                   placeholder='Course Number'
-                  name='isbn'
+                  name='userId'
                   className='form-control'
-                  value={course.isbn}
+                  value={course.userId}
                   onChange={onChange}
                 />
               </div>
