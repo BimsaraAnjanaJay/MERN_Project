@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React from 'react';
+import './App.css'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import Home from './Pages/Home/Home';
@@ -21,6 +22,8 @@ import AddStudent from './Pages/AdminInterface/AddStudent';
 import EditStudent from './Pages/AdminInterface/EditStudent';
 import ShowStudent from './Pages/AdminInterface/ShowStudent';
 import StudentsRecord from './Pages/AdminInterface/StudentsRecord';
+import AddCourse from './Pages/AdminInterface/AddCourse';
+import AddLecturer from './Pages/AdminInterface/AddLecturer';
 
 function App() {
   const handleLogin = (role) => {
@@ -50,6 +53,8 @@ function App() {
             <Route path="/editstudent" element={<EditStudent />} />
             <Route path="/showstudent" element={<ShowStudent />} />
             <Route path="/studentsrecord" element={<StudentsRecord />} />
+            <Route path="/addlecturer" element={<AddLecturer />} />
+            <Route path="/addcourse" element={<AddCourse />} />
         </Routes>
       </div>
     </Router>

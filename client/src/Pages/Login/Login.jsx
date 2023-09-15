@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import "./Login.css";
 import { Link, useNavigate } from 'react-router-dom';
-import { toast } from 'react-toastify'
 import axios from 'axios';
 
 function Login({ onLogin }) {
@@ -68,15 +67,11 @@ function Login({ onLogin }) {
         if (res.data) {
             console.log("User id:", res.data._id);
             console.log("Login successful!");
-            toast.success("Login successful!");
             navigate("../StudentHome");
-        } else {
-            toast.error(res.data.message); 
         }
         })
         .catch((error) => {
         console.error('Login error:', error);
-        toast.error('Login failed!');
         setError('Invalid email or password');
         });
   }
