@@ -9,8 +9,8 @@ const AddStudent = (props) => {
 
   const navigate = useNavigate();
   const [student, setStudent] = useState({
-    title: '',
-    isbn: '',
+    name: '',
+    userID: '',
     author: '',
     description: '',
     published_date: '',
@@ -28,8 +28,8 @@ const AddStudent = (props) => {
       .post('http://localhost:8082/api/student', student)
       .then((res) => {
         setStudent({
-          title: '',
-          isbn: '',
+          name: '',
+          userID: '',
           author: '',
           description: '',
           published_date: '',
