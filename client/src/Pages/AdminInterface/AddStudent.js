@@ -27,7 +27,7 @@ const AddStudent = (props) => {
       .post('http://localhost:9000/admin/user/create', users)
       .then((res) => {
         setStudent({
-          title: '',
+          name: '',
           isbn: '',
           author: '',
           description: '',
