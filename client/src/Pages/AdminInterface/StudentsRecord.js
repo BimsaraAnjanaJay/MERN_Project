@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useParams, useNavigate } from 'react-router-dom';
-import './Records.css';
+import './StudentsRecord.css';
 import axios from 'axios';
 
 function StudentsRecord(props) {

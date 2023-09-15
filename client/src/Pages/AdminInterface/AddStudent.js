@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
-import './Add.css';
+import './AddStudent.css';
 
 import { useNavigate } from 'react-router-dom';
 

@@ -21,8 +21,8 @@ export default function FileUpload({ onFileUpload }) {
     <div className='fileupload'>
       <input
         type="file"
-        accept=".pdf, .mp4"
-        onChange={handleFileChange}
+        accept = ".pdf, .mp4"
+        onChange = {handleFileChange}
         style={{ display: 'none' }}
         ref={(fileInput) => (this.fileInput = fileInput)}
       />
