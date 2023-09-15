@@ -8,7 +8,7 @@ const courseMaterialsSchema = new mongoose.Schema({
     filename: {
         type: String
     },    
-    file: {
+    fileData: {
         type: String
     }
 });

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './Show.css';
+import './ShowStudent.css';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import StudentCard from './StudentCard';

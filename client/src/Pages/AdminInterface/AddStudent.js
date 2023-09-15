@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
-import './Add.css';
+import './AddStudent.css';
 
 import { useNavigate } from 'react-router-dom';
 
@@ -10,11 +10,11 @@ const AddStudent = (props) => {
   const navigate = useNavigate();
   const [student, setStudent] = useState({
     name: '',
-    userId: '',
-    email: '',
-    password: '',
-    userRole: 'student',
-    
+    userID: '',
+    author: '',
+    description: '',
+    published_date: '',
+    publisher: '',
   });
 
   const onChange = (e) => {
@@ -29,10 +29,11 @@ const AddStudent = (props) => {
       .then((res) => {
         setStudent({
           name: '',
-          userId: '',
-          email: '',
-          password: '',
-          userRole: 'student',
+          userID: '',
+          author: '',
+          description: '',
+          published_date: '',
+          publisher: '',
         });
 
         // Push to /
@@ -62,9 +63,9 @@ const AddStudent = (props) => {
                 <input
                   type='text'
                   placeholder='Name of the Student'
-                  name='name'
+                  name='title'
                   className='form-control'
-                  value={student.name}
+                  value={student.title}
                   onChange={onChange}
                 />
               </div>
@@ -72,10 +73,10 @@ const AddStudent = (props) => {
               <div className='admin-form-group'>
                 <input
                   type='text'
-                  placeholder='userId Number'
-                  name='userId'
+                  placeholder='Index Number'
+                  name='isbn'
                   className='form-control'
-                  value={student.userId}
+                  value={student.isbn}
                   onChange={onChange}
                 />
               </div>
@@ -84,9 +85,9 @@ const AddStudent = (props) => {
                 <input
                   type='text'
                   placeholder='E-mail'
-                  name='email'
+                  name='author'
                   className='form-control'
-                  value={student.email}
+                  value={student.author}
                   onChange={onChange}
                 />
               </div>
@@ -94,10 +95,20 @@ const AddStudent = (props) => {
               <div className='admin-form-group'>
                 <input
                   type='text'
-                  placeholder='Password'
-                  name='password'
+                  placeholder='Phone Number'
+                  name='description'
                   className='form-control'
-                  value={student.password}
+                  value={student.description}
+                  onChange={onChange}
+                />
+              </div>
+              <div className='admin-form-group'>
+                <input
+                  type='date'
+                  placeholder='published_date'
+                  name='published_date'
+                  className='form-control'
+                  value={student.published_date}
                   onChange={onChange}
                 />
               </div>
