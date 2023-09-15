@@ -10,10 +10,11 @@ const AddStudent = (props) => {
   const navigate = useNavigate();
   const [student, setStudent] = useState({
     name: '',
-    email: '',
-    password: '',
-    userId: '',
-    userRole: ''
+    userID: '',
+    author: '',
+    description: '',
+    published_date: '',
+    publisher: '',
   });
 
   const onChange = (e) => {
@@ -24,11 +25,11 @@ const AddStudent = (props) => {
     e.preventDefault();
 
     axios
-      .post('http://localhost:9000/admin/user/create', users)
+      .post('http://localhost:8082/api/student', student)
       .then((res) => {
         setStudent({
-          title: '',
-          isbn: '',
+          name: '',
+          userID: '',
           author: '',
           description: '',
           published_date: '',

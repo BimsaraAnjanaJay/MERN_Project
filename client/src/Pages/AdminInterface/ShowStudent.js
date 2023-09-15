@@ -9,7 +9,7 @@ function ShowStudent() {
 
   useEffect(() => {
     axios
-      .get('http://localhost:8082/admin/user')
+      .get('http://localhost:8082/api/student')
       .then((res) => {
         setStudent(res.data);
       })

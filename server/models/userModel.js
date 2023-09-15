@@ -17,12 +17,12 @@ const userSchema = new mongoose.Schema({
   userId: {
     type: Number,
     unique: true,
-    required: true,
+    required: false,
   },
   userRole: {
     type: String,
     enum: ['admin', 'lecturer', 'student'],
-    required: true
+    required: false
   },
 });
 
