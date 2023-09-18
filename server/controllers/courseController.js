@@ -66,50 +66,6 @@ const getAllCourses = async (req, res) => {
         })
 }
 
-// Assign a teacher to a course (accessible only to admins)
-// const assignTeacher = async (req, res) => {
-//   try {
-//     const courseId = req.params.courseId;
-//     const teacherId = req.body.userId;
-
-//     const course = await courseModel.findById(courseId);
-//     if (!course) {
-//       return res.status(404).json({ message: 'Course not found' });
-//     }
-
-//     // Update the course with the assigned teacher
-//     course.teacher = teacherId;
-//     await course.save();
-
-//     res.json(course);
-//   } catch (error) {
-//     console.error(error);
-//     res.status(500).json({ message: 'Internal Server Error' });
-//   }
-// };
-
-// // Enroll a student in a course (accessible only to admins)
-// const enrollStudent = async (req, res) => {
-//   try {
-//     const courseId = req.params.courseId;
-//     const studentId = req.body.userId;
-
-//     const course = await courseModele.findById(courseId);
-//     if (!course) {
-//       return res.status(404).json({ message: 'Course not found' });
-//     }
-
-//     // Add the student to the course
-//     course.students.push(studentId);
-//     await course.save();
-
-//     res.json(course);
-//   } catch (error) {
-//     console.error(error);
-//     res.status(500).json({ message: 'Internal Server Error' });
-//   }
-// };
-
 
 // Assign a lecturer to a course
 const assignLecturerToCourse = async (req, res) => {

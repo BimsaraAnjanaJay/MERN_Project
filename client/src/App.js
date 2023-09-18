@@ -8,6 +8,7 @@ import StudentHome from './Pages/StudentInterface/StudentHome';
 import StudentDashboard from './Pages/StudentInterface/StudentDashboard';
 import StudentProfile from './Pages/StudentInterface/StudentProfile';
 import StudentAssignments from './Pages/StudentInterface/StudentAssignments';
+// import CourseContent from './Pages/StudentInterface/CourseContent'; 
 
 import LecturerHome from './Pages/LecturerInterface/LecturerHome';
 import LecturerDashboard from './Pages/LecturerInterface/LecturerDashboard';
@@ -21,6 +22,16 @@ import AddStudent from './Pages/AdminInterface/AddStudent';
 import EditStudent from './Pages/AdminInterface/EditStudent';
 import ShowStudent from './Pages/AdminInterface/ShowStudent';
 import StudentsRecord from './Pages/AdminInterface/StudentsRecord';
+
+import AddLecturer from './Pages/AdminInterface/AddLecturer';
+import EditLecturer from './Pages/AdminInterface/EditLecturer';
+import ShowLecturer from './Pages/AdminInterface/ShowLecturer';
+import LecturersRecord from './Pages/AdminInterface/LecturersRecord';
+
+import AddCourse from './Pages/AdminInterface/AddCourse';
+import EditCourse from './Pages/AdminInterface/EditCourse';
+import ShowCourse from './Pages/AdminInterface/ShowCourse';
+import CoursesRecord from './Pages/AdminInterface/CoursesRecord';
 
 function App() {
   const handleLogin = (role) => {
@@ -50,6 +61,16 @@ function App() {
             <Route path="/editstudent" element={<EditStudent />} />
             <Route path="/showstudent" element={<ShowStudent />} />
             <Route path="/studentsrecord" element={<StudentsRecord />} />
+
+            <Route path="/addlecturer" element={<AddLecturer />} />
+            <Route path="/editlecturer" element={<EditLecturer />} />
+            <Route path="/showlecturer" element={<ShowLecturer />} />
+            <Route path="/lecturersrecord" element={<LecturersRecord />} />
+
+            <Route path="/addcourse" element={<AddCourse />} />
+            <Route path="/editcourse" element={<EditCourse />} />
+            <Route path="/showcourse" element={<ShowCourse />} />
+            <Route path="/coursesrecord" element={<CoursesRecord />} />
         </Routes>
       </div>
     </Router>

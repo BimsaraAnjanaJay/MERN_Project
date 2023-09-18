@@ -62,7 +62,7 @@ function Login({ onLogin }) {
     }
     console.log(userData)
 
-    axios.post("http://localhost:5000/auth", userData)
+    axios.post("http://localhost:9000/auth", userData)
         .then((res) => {
         console.log("Response from server:", res.data);
         if (res.data) {
