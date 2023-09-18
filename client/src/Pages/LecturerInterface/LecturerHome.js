@@ -11,9 +11,9 @@ export default function LectureHome() {
           <LecNavSideBar sidebar={sidebar} setSidebar={setSidebar} />
           <div className={`lec_home_card-container ${sidebar ? 'with-sidebar' : ''}`}>
           </div>  
-      <div className="lec_home_card-container01">
-        <div className='lec_home_card-container0101'>
-          <h5><center className='lec_home_card01-text'>Pahasara Higher Education Center</center></h5>
+      <div className = "lec_home_card-container01">
+        <div className = 'lec_home_card-container0101'>
+          <h5><center className = 'lec_home_card01-text'>Pahasara Higher Education Center</center></h5>
         </div>
       </div>
       <div className="lec_home_card-container02">
