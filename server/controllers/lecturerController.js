@@ -141,6 +141,7 @@
 const { courseModel } = require('../models/courseModel');
 const { courseMaterialsModel } = require('../models/courseMaterialsModel');
 const { submissionModel } = require('../models/submissionModel')
+const path = require('path')
 
 const uploadCourseMaterial = async (req, res) => {
     const courseId = req.params.courseId
@@ -165,27 +166,6 @@ const uploadCourseMaterial = async (req, res) => {
         })
 }
 
-// const createSubmissionLink = async (req, res) => {
-//     const courseId = req.params.courseId
-//     const { title, description } = req.body
-
-//     try {
-//         const course = await courseModel.findById(courseId)
-//         if (!course) {
-//             return res.status(404).json({ message: "Course not found" })
-//         }
-
-//         course.submissionLinks.push({ title, description })
-//         await course.save()
-
-//         res.json({ message: 'Submission link created successfully' });
-//     } 
-//     catch (error) {
-//         console.error(error);
-//         res.status(500).json({ message: 'Internal Server Error' });
-//     }
-// }
-
 const createSubmissionLink = async (req, res) => {
     const courseId = req.params.courseId
     const { title, description } = req.body
@@ -196,20 +176,41 @@ const createSubmissionLink = async (req, res) => {
             return res.status(404).json({ message: "Course not found" })
         }
 
-        const newSubmissionLink = new submissionModel({ courseId, title, description })
-        await newSubmissionLink.save()
-            .then(() => {
-                res.status(200).json({ message: 'Submission link created successfully' });
-            })
-            .catch((err) => {
-                res.status(500).json({ message: err });
-            })
+        course.submissionLinks.push({ title, description })
+        await course.save()
+
+        res.json({ message: 'Submission link created successfully' });
     } 
     catch (error) {
         console.error(error);
         res.status(500).json({ message: 'Internal Server Error' });
     }
 }
+
+// const createSubmissionLink = async (req, res) => {
+//     const courseId = req.params.courseId
+//     const { title, description } = req.body
+
+//     try {
+//         const course = await courseModel.findById(courseId)
+//         if (!course) {
+//             return res.status(404).json({ message: "Course not found" })
+//         }
+
+//         const newSubmissionLink = new submissionModel({ courseId, title, description })
+//         await newSubmissionLink.save()
+//             .then(() => {
+//                 res.status(200).json({ message: 'Submission link created successfully' });
+//             })
+//             .catch((err) => {
+//                 res.status(500).json({ message: err });
+//             })
+//     } 
+//     catch (error) {
+//         console.error(error);
+//         res.status(500).json({ message: 'Internal Server Error' });
+//     }
+// }
 
 module.exports = {
     uploadCourseMaterial,
